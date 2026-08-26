@@ -4,11 +4,14 @@
   const escapeHtml=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   const yen=value=>Math.round(value).toLocaleString("ja-JP")+"円";
   const statusClass=value=>/多数/.test(value)?"status-many":/[123１２３]名/.test(value)?"status-few":/空き無し|なし|無し/.test(value)?"status-none":"status-info";
+  const statusMark=value=>/多数/.test(value)?"○":/[123１２３]名/.test(value)?"△":/空き無し|なし|無し/.test(value)?"×":"・";
 
   function renderAvailability(){
     document.querySelectorAll("[data-pds-availability]").forEach(root=>{
-      root.innerHTML=`<p class="availability-status" id="availabilityMessage">空き状況を読み込んでいます…</p>
-        <table class="availability-table"><thead><tr><th>曜日</th><th>デイサービス</th><th>入浴</th></tr></thead><tbody id="availabilityBody"></tbody></table>`;
+      root.innerHTML=`<div class="availability-toolbar">
+          <p class="availability-status" id="availabilityMessage">空き状況を読み込んでいます…</p>
+          <div class="availability-legend" aria-label="空き状況の見方"><span class="legend-many">○ 多数</span><span class="legend-few">△ 1〜3名</span><span class="legend-none">× 空きなし</span></div>
+        </div><div class="availability-grid" id="availabilityGrid" aria-live="polite"></div>`;
     });
   }
 
@@ -29,13 +32,13 @@
   }
 
   function initAvailability(config){
-    const body=document.getElementById("availabilityBody");
+    const grid=document.getElementById("availabilityGrid");
     const message=document.getElementById("availabilityMessage");
-    if(!body||!message) return;
+    if(!grid||!message) return;
     let settled=false;
     const fail=()=>{
       if(settled) return;
-      body.innerHTML="";
+      grid.innerHTML='<div class="availability-error"><strong>空き状況を表示できませんでした</strong><span>見学・利用開始はお電話でご確認ください。</span></div>';
       message.textContent="空き状況を読み込めませんでした。見学・利用開始はお電話でご確認ください。";
     };
     window.__pdsSaiwaichoAvailability=response=>{
@@ -44,7 +47,11 @@
           day:row.c?.[0]?.v||"",facility:row.c?.[1]?.v||"",bath:row.c?.[2]?.v||""
         })).filter(row=>config.openDays.includes(String(row.day)));
         if(!rows.length) return fail();
-        body.innerHTML=rows.map(row=>`<tr><th scope="row">${escapeHtml(row.day)}</th><td><span class="status ${statusClass(String(row.facility))}">${escapeHtml(row.facility||"要確認")}</span></td><td><span class="status ${statusClass(String(row.bath))}">${escapeHtml(row.bath||"要確認")}</span></td></tr>`).join("");
+        grid.innerHTML=rows.map(row=>`<article class="availability-day">
+          <h3><span>${escapeHtml(row.day)}</span>曜日</h3>
+          <div class="availability-main"><strong class="availability-badge availability-badge--main ${statusClass(String(row.facility))}"><i aria-hidden="true">${statusMark(String(row.facility))}</i>${escapeHtml(row.facility||"要確認")}</strong></div>
+          <div class="availability-bath"><span class="availability-label">入浴</span><strong class="availability-badge ${statusClass(String(row.bath))}"><i aria-hidden="true">${statusMark(String(row.bath))}</i>${escapeHtml(row.bath||"要確認")}</strong></div>
+        </article>`).join("");
         settled=true;
         message.textContent="幸町店の入力表から表示しています。利用開始前はお電話でもご確認ください。";
       }catch(error){fail();}

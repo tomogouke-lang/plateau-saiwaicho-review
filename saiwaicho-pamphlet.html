@@ -4,25 +4,259 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>プラトー幸町｜A4三つ折りパンフレット確認用</title>
   <style>
-    :root{--navy:#17334c;--blue:#195a93;--sky:#eaf5fb;--coral:#c65e44;--cream:#fff8ef;--ink:#1f2d38;--line:#c6d8e2}
-    *{box-sizing:border-box} html,body{margin:0} body{padding:24px 0;background:#dae5e9;color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    .guide{width:297mm;margin:0 auto 10px;color:#34444f;font-size:13px}.sheet{width:297mm;height:210mm;display:flex;margin:0 auto 18px;background:#fff;box-shadow:0 10px 30px #17334c33;overflow:hidden}.panel{position:relative;width:99mm;height:210mm;padding:10mm 8mm;overflow:hidden;border-left:.3mm dashed #a8bac4;display:flex;flex-direction:column}.panel:first-child{border-left:0}.label{position:absolute;right:5mm;top:4mm;color:#58717f;font-size:8.5pt;font-weight:700}.kicker{margin:0 0 3mm;color:var(--coral);font-size:10pt;font-weight:900;letter-spacing:.12em}.panel h1{margin:8mm 0 4mm;color:var(--navy);font-size:27pt;line-height:1.3;letter-spacing:-.04em}.panel h2{margin:0 0 4mm;color:var(--navy);font-size:20pt;line-height:1.35;letter-spacing:-.03em}.panel h3{margin:0 0 2mm;color:var(--navy);font-size:13pt;line-height:1.4}.panel p,.panel li{font-size:10.5pt;line-height:1.63}.panel p{margin:0 0 3mm}.cover{background:linear-gradient(150deg,#fff 0 61%,#e8f4fa 61%)}.cover .sub{font-size:12pt;font-weight:800}.photo{position:relative;overflow:hidden;border-radius:4mm;background:#e5f0f5}.photo img{width:100%;height:100%;object-fit:cover}.cover-photo{height:72mm;margin-top:auto}.caption{position:absolute;bottom:3mm;left:3mm;padding:1.5mm 3mm;border-radius:99px;background:#fffffff0;color:var(--navy);font-size:8.5pt;font-weight:800}.contact{background:var(--cream)}.phone{display:block;margin:3mm 0 4mm;color:#3335bb;font-size:22pt;font-weight:900;text-decoration:none}.facts{margin:0;padding:0;list-style:none}.facts li{padding:2.6mm 0;border-bottom:.3mm solid #dccfbf;font-size:10pt;line-height:1.5}.facts b{display:block;color:var(--navy)}.soft{margin-top:auto;padding:4mm;border-radius:4mm;background:#fff;color:var(--ink)}.checks{margin:0;padding:0;list-style:none}.checks li{position:relative;margin:0 0 3mm;padding:3mm 3mm 3mm 10mm;border-left:2mm solid var(--coral);background:#fff4ea}.checks li::before{content:"✓";position:absolute;left:3mm;top:2mm;color:var(--coral);font-size:14pt;font-weight:900}.floor-one{background:#fff8ef}.floor-two{background:var(--navy);color:#fff}.floor-two h2,.floor-two h3,.floor-two .facts b{color:#fff}.floor-two .kicker{color:#8dd3ed}.floor-two .photo{background:#244963}.floor-two .facts li{border-color:#44647a}.image-short{height:52mm;margin-top:auto}.band{margin-top:4mm;padding:3mm 4mm;border-radius:3mm;background:#dceff7;color:var(--navy);font-size:10pt;font-weight:800}.inside-last{background:#f3f8fa}.price{padding:4mm;border-radius:4mm;background:#fff}.price b{display:block;color:var(--navy);font-size:16pt;line-height:1.25}.small{font-size:9.5pt!important;line-height:1.5!important}.warning{margin-top:4mm;padding:3mm;border-left:2mm solid var(--coral);background:#fff;font-size:9.5pt;line-height:1.5}.ai-note{margin:3mm 0 0;color:#5d6c75;font-size:8.5pt;line-height:1.4}.call-mini{margin-top:auto;padding:4mm;border-radius:4mm;color:#fff;background:var(--blue)}.call-mini b{display:block;font-size:12pt}.call-mini a{display:block;margin-top:1mm;color:#fff;font-size:17pt;font-weight:900;text-decoration:none}@media print{@page{size:A4 landscape;margin:0}body{padding:0;background:#fff}.guide{display:none}.sheet{margin:0;box-shadow:none;page-break-after:always}.sheet:last-child{page-break-after:auto}.label{display:none}}
+    :root {
+      --navy:#153a55;
+      --blue:#156b9d;
+      --coral:#b94e35;
+      --cream:#fff5e9;
+      --ice:#eaf5f8;
+      --ink:#122c3c;
+      --muted:#4e6672;
+      --line:#cbdce3;
+    }
+    * { box-sizing:border-box; }
+    html,body { margin:0; }
+    body {
+      padding:24px 0;
+      background:#dce7ea;
+      color:var(--ink);
+      font-family:"Noto Sans JP","BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+      -webkit-print-color-adjust:exact;
+      print-color-adjust:exact;
+      word-break:auto-phrase;
+    }
+    .guide { width:297mm; margin:0 auto 10px; color:#34444f; font-size:13px; }
+    .sheet { width:297mm; height:210mm; display:flex; margin:0 auto 18px; overflow:hidden; background:#fff; box-shadow:0 10px 30px #17334c33; }
+    .panel { position:relative; width:99mm; height:210mm; overflow:hidden; border-left:.3mm dashed #9db3bd; }
+    .panel:first-child { border-left:0; }
+    .label { position:absolute; z-index:5; top:3mm; right:4mm; padding:1mm 2mm; border-radius:99px; background:#ffffffdc; color:#4f6672; font-size:8pt; font-weight:800; }
+    .kicker { margin:0 0 2.5mm; color:var(--coral); font-size:10pt; font-weight:900; letter-spacing:.12em; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:4mm; font-size:25pt; line-height:1.28; letter-spacing:-.045em; }
+    h2 { margin-bottom:3mm; font-size:20pt; line-height:1.3; letter-spacing:-.035em; }
+    h3 { margin-bottom:1mm; font-size:12.5pt; line-height:1.4; }
+    p,li { font-size:11pt; line-height:1.58; }
+    p { margin-bottom:3mm; }
+    .photo { position:relative; overflow:hidden; background:#dce8ed; }
+    .photo img { width:100%; height:100%; display:block; object-fit:cover; }
+    .caption { position:absolute; left:4mm; bottom:4mm; padding:1.5mm 3mm; border-radius:99px; background:#fffffff0; color:var(--navy); font-size:10pt; font-weight:900; }
+
+    .steps { padding:10mm 8mm 8mm; background:var(--cream); }
+    .steps h2 { margin-bottom:5mm; color:var(--navy); }
+    .step-list { display:grid; gap:3.5mm; }
+    .step { display:grid; grid-template-columns:12mm 1fr; gap:3mm; min-height:39mm; padding:4mm; border-radius:3mm; background:#fff; box-shadow:0 1mm 3mm #76372312; }
+    .step-no { display:grid; place-items:center; width:12mm; height:12mm; border-radius:50%; background:var(--coral); color:#fff; font-size:13pt; font-weight:900; }
+    .step h3 { color:var(--navy); }
+    .step p { margin:0; font-size:11pt; line-height:1.5; }
+    .fixed { margin-top:4mm; padding:4mm; border-left:2mm solid var(--coral); background:#ffe3d6; color:#612719; font-size:11pt; font-weight:800; line-height:1.55; }
+
+    .back { background:#f7fbfc; }
+    .back-photo { height:78mm; }
+    .back-body { height:132mm; padding:6mm 8mm 7mm; display:flex; flex-direction:column; }
+    .back h2 { color:var(--navy); }
+    .contact-card { padding:3.5mm 4mm; border-radius:3mm; background:var(--navy); color:#fff; }
+    .contact-card small { display:block; font-size:10pt; font-weight:700; }
+    .phone { display:block; margin:.5mm 0 0; color:#fff; font-size:22pt; font-weight:900; line-height:1.2; text-decoration:none; font-variant-numeric:tabular-nums; }
+    .address { margin:3mm 0 !important; font-size:11pt !important; line-height:1.5 !important; }
+    .info-list { margin:0; padding:0; list-style:none; border-top:.3mm solid var(--line); }
+    .info-list li { display:grid; grid-template-columns:27mm 1fr; gap:2mm; padding:2.5mm 0; border-bottom:.3mm solid var(--line); font-size:10.5pt; line-height:1.45; }
+    .info-list b { color:var(--navy); }
+    .back-note { margin-top:auto; padding:3mm 3.5mm; border-radius:3mm; background:#e3f1f5; color:var(--navy); font-size:10.5pt; font-weight:800; line-height:1.45; }
+
+    .cover { background:var(--navy); color:#fff; }
+    .cover-photo { height:108mm; }
+    .cover-photo img { object-position:center 28%; }
+    .cover-copy { height:102mm; padding:8mm; display:flex; flex-direction:column; }
+    .cover .kicker { color:#91d6e9; }
+    .cover h1 { color:#fff; font-size:24pt; line-height:1.3; }
+    .cover-lead { margin:0; color:#e2eef3; font-size:11.5pt; font-weight:700; line-height:1.6; }
+    .cover-name { margin-top:auto; padding-top:4mm; border-top:.3mm solid #ffffff66; font-size:12.5pt; font-weight:900; line-height:1.45; }
+
+    .floor-one { background:#fff7ed; }
+    .floor-two { background:#eff7fa; }
+    .floor-photo { height:76mm; }
+    .floor-body { height:134mm; padding:6mm 8mm 7mm; display:flex; flex-direction:column; }
+    .floor h2 { color:var(--navy); }
+    .floor-one .kicker { color:var(--coral); }
+    .floor-two .kicker { color:var(--blue); }
+    .floor-intro { margin-bottom:3mm; padding:3.5mm 4mm; border-radius:3mm; background:#fff; font-size:11pt; font-weight:800; line-height:1.55; }
+    .floor-one .floor-intro { border-left:2mm solid var(--coral); }
+    .floor-two .floor-intro { border-left:2mm solid var(--blue); }
+    .feature-list { margin:0; padding:0; list-style:none; }
+    .feature-list li { padding:2.5mm 0; border-bottom:.3mm solid var(--line); font-size:10.8pt; line-height:1.5; }
+    .feature-list b { display:block; margin-bottom:.5mm; color:var(--navy); font-size:11.5pt; }
+    .floor-message { margin-top:auto; padding:3mm 3.5mm; border-radius:3mm; color:#fff; font-size:10.8pt; font-weight:800; line-height:1.5; }
+    .floor-one .floor-message { background:var(--coral); }
+    .floor-two .floor-message { background:var(--blue); }
+
+    .detail { padding:5.5mm 6.5mm 4mm; background:#f2f8fa; }
+    .detail .kicker { margin-bottom:1mm; color:var(--blue); }
+    .detail h2 { margin-bottom:1mm; color:var(--navy); font-size:21pt; }
+    .fee-lead { margin-bottom:2mm; color:var(--muted); font-size:10.5pt; font-weight:800; line-height:1.45; }
+    .fee-section-title { margin:0 0 1.5mm; color:var(--navy); font-size:11.5pt; font-weight:900; line-height:1.35; }
+    .fee-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5mm; }
+    .fee-card { overflow:hidden; border:.35mm solid #a9c5d1; border-radius:2.5mm; background:#fff; }
+    .fee-card h3 { margin:0; padding:2mm 1.5mm; background:var(--navy); color:#fff; font-size:10.5pt; line-height:1.35; text-align:center; }
+    .fee-card table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+    .fee-card th,.fee-card td { padding:1.25mm 1.5mm; border-bottom:.25mm solid var(--line); font-size:10.2pt; line-height:1.25; }
+    .fee-card tr:last-child th,.fee-card tr:last-child td { border-bottom:0; }
+    .fee-card th { color:var(--ink); font-weight:800; text-align:left; white-space:nowrap; }
+    .fee-card td { color:var(--navy); font-weight:900; text-align:right; white-space:nowrap; }
+    .included-note { margin:1.5mm 0 2mm; padding:2.2mm 2.5mm; border-radius:2mm; background:#e2f0f5; color:#23485b; font-size:10pt; font-weight:800; line-height:1.4; }
+    .monthly-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5mm; }
+    .monthly-card { padding:2.5mm; border-radius:2.5mm; background:#fff; border:.35mm solid var(--line); }
+    .monthly-card h3 { margin:0 0 1.2mm; color:var(--blue); font-size:10.8pt; }
+    .monthly-row { display:flex; justify-content:space-between; gap:2mm; padding:.7mm 0; font-size:10pt; font-weight:800; line-height:1.35; }
+    .monthly-row strong { color:var(--navy); white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .extra-costs { display:grid; grid-template-columns:1fr 1fr; gap:1mm 3mm; margin-top:2.5mm; padding:2.5mm 3mm; border-radius:2.5mm; background:#fff0d5; color:#533b13; }
+    .extra-costs div { font-size:10pt; font-weight:800; line-height:1.35; }
+    .extra-costs strong { color:#3e2a0c; font-size:10.5pt; font-variant-numeric:tabular-nums; }
+    .monthly-addons { margin:2mm 0 0; color:var(--muted); font-size:10pt; line-height:1.4; }
+    .fee-contact { display:flex; align-items:center; justify-content:space-between; gap:2mm; margin-top:1.5mm; padding:1.3mm 2.5mm; border-radius:2mm; background:var(--navy); color:#fff; }
+    .fee-contact span { font-size:10pt; font-weight:800; }
+    .fee-contact a { color:#fff; font-size:14pt; font-weight:900; line-height:1.2; text-decoration:none; white-space:nowrap; font-variant-numeric:tabular-nums; }
+
+    @media print {
+      @page { size:A4 landscape; margin:0; }
+      body { padding:0; background:#fff; }
+      .guide { display:none; }
+      .sheet { margin:0; box-shadow:none; page-break-after:always; }
+      .sheet:last-child { page-break-after:auto; }
+      .label { display:none; }
+    }
   </style>
 </head>
 <body>
-  <p class="guide">確認用｜A4横・両面・巻き三つ折り。点線は折り位置の目安です。Canva保存・印刷前のレイアウトです。</p>
+  <p class="guide">確認用｜A4横・両面・巻き三つ折り。点線は折り位置の目安です。公開・Canva保存・印刷注文前の確認版です。</p>
+
   <section class="sheet" aria-label="パンフレット外側">
-    <article class="panel contact"><span class="label">外側｜折り返し</span><p class="kicker">TOUR</p><h2>まずは、<br>2つのフロアを<br>見てください。</h2><p>運動量、休憩の取り方、人との交流。ご本人の過ごし方を伺い、利用開始前にフロアをご相談のうえご案内します。</p><div class="soft"><h3>見学・ご相談</h3><a class="phone" href="tel:0762342338">076-234-2338</a><p class="small">受付時間 8:00〜17:00<br>月〜土曜日</p></div><p class="ai-note">掲載している人物は、プライバシー保護のためAI加工しています。</p></article>
-    <article class="panel"><span class="label">外側｜裏表紙</span><p class="kicker">PLATEAU SAIWAI-CHO</p><h2>基本情報</h2><ul class="facts"><li><b>サービス</b>通所介護／介護予防型通所サービス／基準緩和型通所サービス</li><li><b>サービス提供時間</b>1単位目 9:30〜15:30<br>2単位目 9:30〜14:30</li><li><b>住所</b>〒920-0968<br>金沢市幸町3番15号 吉村ビル1階</li></ul><div class="band">空き状況・料金の目安は、確認用ページでご覧いただけます。</div><div class="photo image-short"><img src="assets/saiwaicho/exterior.jpg" alt="プラトー幸町店の外観"><span class="caption">幸町店 外観</span></div></article>
-    <article class="panel cover"><span class="label">外側｜表紙</span><p class="kicker">PDS PLATEAU</p><h1>あなたの<br>過ごし方に合う、<br>1階か2階か。</h1><p class="sub">プラトー幸町<br>アンドトレーニングセンター</p><p>1階は、動く・休む・話す。<br>2階は、歩くことに集中する。</p><div class="photo cover-photo"><img src="assets/saiwaicho/hero-ai-training.png" alt="スタッフと一緒にルームランナーで運動する様子"><span class="caption">見学時にフロアをご案内します</span></div></article>
+    <article class="panel steps">
+      <span class="label">外側｜折り返し</span>
+      <p class="kicker">HOW TO START</p>
+      <h2>利用開始までの<br>3つのステップ</h2>
+      <div class="step-list">
+        <div class="step"><span class="step-no">1</span><div><h3>お電話・見学予約</h3><p>ご本人・ご家族・ケアマネジャーからご相談ください。</p></div></div>
+        <div class="step"><span class="step-no">2</span><div><h3>1階・2階を見学</h3><p>運動量、休憩、入浴、交流の希望を一緒に確認します。</p></div></div>
+        <div class="step"><span class="step-no">3</span><div><h3>利用フロアを決定</h3><p>身体状況と過ごし方を踏まえ、利用開始前にご案内します。</p></div></div>
+      </div>
+      <div class="fixed">フロアは利用開始前に決めます。その日の気分で1階・2階を行き来する運用ではありません。</div>
+    </article>
+
+    <article class="panel back">
+      <span class="label">外側｜裏表紙</span>
+      <div class="photo back-photo"><img src="assets/saiwaicho/exterior.jpg" alt="プラトー幸町店の外観"><span class="caption">幸町店 外観</span></div>
+      <div class="back-body">
+        <p class="kicker">VISIT &amp; CONTACT</p>
+        <h2>見学・ご相談は<br>お気軽に。</h2>
+        <div class="contact-card"><small>月〜土曜日 8:00〜17:00</small><a class="phone" href="tel:0762342338">076-234-2338</a></div>
+        <p class="address">〒920-0968<br>金沢市幸町3番15号 吉村ビル1階</p>
+        <ul class="info-list"><li><b>提供時間</b><span>9:30〜15:30<br>9:30〜14:30</span></li><li><b>営業日</b><span>月〜土曜日<br>日曜・年末年始休</span></li></ul>
+        <div class="back-note">空き状況・料金の目安は、確認ページまたはお電話でご案内します。</div>
+      </div>
+    </article>
+
+    <article class="panel cover">
+      <span class="label">外側｜表紙</span>
+      <div class="photo cover-photo"><img src="assets/saiwaicho/hero-ai-training.png" alt="スタッフと一緒にルームランナーで運動する様子"><span class="caption">人物写真はAI加工済み</span></div>
+      <div class="cover-copy">
+        <p class="kicker">PDS PLATEAU SAIWAI-CHO</p>
+        <h1>過ごし方に合わせる、<br>1階と2階。</h1>
+        <p class="cover-lead">運動・交流・休息の1階。<br>歩行と運動に集中する2階。</p>
+        <div class="cover-name">プラトー幸町<br>アンドトレーニングセンター</div>
+      </div>
+    </article>
   </section>
+
   <section class="sheet" aria-label="パンフレット内側">
-    <article class="panel floor-one"><span class="label">内側｜左</span><p class="kicker">1ST FLOOR</p><h2>動いたあとに、<br>ほっとする時間も。</h2><p>運動もしたい。体を休める時間もほしい。人との会話を楽しみたい。そんな過ごし方を希望される方に、1階をご案内します。</p><ul class="facts"><li><b>運動</b>平行棒／ルームランナー／エアロバイク／タオル体操／ダンベル体操</li><li><b>リラクゼーション</b>マッサージ／メドマー／ウォーターベッド／岩盤浴／あったか姫</li></ul><div class="photo image-short"><img src="assets/saiwaicho/floor-one.jpg" alt="1階のテーブルと運動スペース"><span class="caption">1階｜交流と運動の空間</span></div></article>
-    <article class="panel floor-two"><span class="label">内側｜中央</span><p class="kicker">2ND FLOOR</p><h2>歩くことに、<br>しっかり向き合う。</h2><p>身体をしっかり動かしたい。歩行や外出に向けた運動に取り組みたい。そんな方に、2階をご案内します。</p><ul class="facts"><li><b>運動</b>平行棒／ルームランナー／エアロバイクなど</li><li><b>過ごし方</b>横になって休める場所があります。リラクゼーション機器はありません。</li><li><b>入浴</b>ご相談いただけます。</li></ul><div class="photo image-short"><img src="assets/saiwaicho/floor-two-wide.jpg" alt="2階の平行棒と運動機器があるスペース"><span class="caption">2階｜運動に集中する空間</span></div></article>
-    <article class="panel inside-last"><span class="label">内側｜右</span><p class="kicker">BEFORE YOU START</p><h2>ご利用前に、<br>お聞かせください。</h2><ul class="checks"><li>どのくらい身体を動かしたいか</li><li>休憩や入浴についての希望</li><li>人と話す時間をどう過ごしたいか</li></ul><div class="price"><p class="small">料金の目安（1割負担・例）</p><b>月額 約6,231円</b><p class="small">要介護2／6時間以上7時間未満／週1回程度／昼食あり。実際の料金は利用内容・加算で変わります。</p></div><p class="warning">フロアは利用開始前にご相談のうえご案内します。利用中に、その日の気分で1階・2階を移動する運用ではありません。</p><div class="call-mini"><b>見学・ご相談</b><a href="tel:0762342338">076-234-2338</a><span class="small">空き状況・料金の詳細もお電話でご確認ください。</span></div></article>
+    <article class="panel floor floor-one">
+      <span class="label">内側｜左</span>
+      <div class="photo floor-photo"><img src="assets/saiwaicho/floor-one.jpg" alt="1階の交流と運動の空間"><span class="caption">1階｜運動・交流・休息</span></div>
+      <div class="floor-body">
+        <p class="kicker">1ST FLOOR</p>
+        <h2>動いたあとに、<br>ほっとする時間も。</h2>
+        <div class="floor-intro">運動もリラクゼーションもしたい方へ。人との交流の中で、笑いが生まれる場所です。</div>
+        <ul class="feature-list">
+          <li><b>運動</b>平行棒、ルームランナー、エアロバイク、タオル体操、ダンベル体操</li>
+          <li><b>リラクゼーション</b>マッサージ、メドマー、ウォーターベッド、岩盤浴、あったか姫</li>
+        </ul>
+        <div class="floor-message">痛みの緩和に配慮しながら、適度に身体を動かしたい方にも。</div>
+      </div>
+    </article>
+
+    <article class="panel floor floor-two">
+      <span class="label">内側｜中央</span>
+      <div class="photo floor-photo"><img src="assets/saiwaicho/floor-two-wide.jpg" alt="2階の平行棒と運動機器"><span class="caption">2階｜歩行と運動に集中</span></div>
+      <div class="floor-body">
+        <p class="kicker">2ND FLOOR</p>
+        <h2>歩くことに、<br>しっかり向き合う。</h2>
+        <div class="floor-intro">とにかく運動がしたい方へ。下肢筋力をつけ、歩行への自信と外出機会につなげます。</div>
+        <ul class="feature-list">
+          <li><b>運動設備</b>平行棒、ルームランナー、エアロバイクなど</li>
+          <li><b>休憩・リラクゼーション</b>横になれる場所があります。リラクゼーション機器はありません。</li>
+        </ul>
+        <div class="floor-message">入浴は可能です。身体状況に応じて、事前にご相談ください。</div>
+      </div>
+    </article>
+
+    <article class="panel detail">
+      <span class="label">内側｜右</span>
+      <p class="kicker">SERVICE FEES</p>
+      <h2>利用料金</h2>
+      <p class="fee-lead">2026年6月現在の目安です。自己負担割合が1割の方の場合。</p>
+
+      <p class="fee-section-title">通所介護｜1回あたり</p>
+      <div class="fee-grid">
+        <section class="fee-card">
+          <h3>3時間以上<br>4時間未満</h3>
+          <table aria-label="3時間以上4時間未満の利用料金">
+            <tbody>
+              <tr><th>要介護1</th><td>509円</td></tr>
+              <tr><th>要介護2</th><td>569円</td></tr>
+              <tr><th>要介護3</th><td>633円</td></tr>
+              <tr><th>要介護4</th><td>694円</td></tr>
+              <tr><th>要介護5</th><td>757円</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="fee-card">
+          <h3>5時間以上<br>6時間未満</h3>
+          <table aria-label="5時間以上6時間未満の利用料金">
+            <tbody>
+              <tr><th>要介護1</th><td>782円</td></tr>
+              <tr><th>要介護2</th><td>899円</td></tr>
+              <tr><th>要介護3</th><td>1,016円</td></tr>
+              <tr><th>要介護4</th><td>1,134円</td></tr>
+              <tr><th>要介護5</th><td>1,252円</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <div class="included-note">基本サービス費・個別機能訓練加算・サービス提供体制強化加算・介護職員等処遇改善加算を含みます。5〜6時間は入浴介助加算も含みます。</div>
+
+      <div class="monthly-grid">
+        <section class="monthly-card">
+          <h3>介護予防型｜1か月</h3>
+          <div class="monthly-row"><span>週1回</span><strong>2,297円</strong></div>
+          <div class="monthly-row"><span>週2回</span><strong>4,464円</strong></div>
+        </section>
+        <section class="monthly-card">
+          <h3>基準緩和型｜1か月</h3>
+          <div class="monthly-row"><span>週1回</span><strong>1,789円</strong></div>
+          <div class="monthly-row"><span>週2回</span><strong>3,443円</strong></div>
+        </section>
+      </div>
+
+      <div class="extra-costs">
+        <div>食費<br><strong>630円／食</strong></div>
+        <div>紙おむつ<br><strong>80円／枚</strong></div>
+        <div>パット<br><strong>40円／枚</strong></div>
+        <div>送迎なし<br><strong>片道54円減額</strong></div>
+      </div>
+      <p class="monthly-addons">通所介護は別途、月単位の加算があります（1割負担：個別機能訓練23円、科学的介護46円、ADL維持等68円）。利用回数や端数処理などにより実際の金額は変わります。</p>
+      <div class="fee-contact"><span>料金・見学のご相談</span><a href="tel:0762342338">076-234-2338</a></div>
+    </article>
   </section>
 </body>
 </html>

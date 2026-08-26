@@ -82,10 +82,26 @@ h3 { color: var(--saiwai-navy); font-size: 25px; line-height: 1.45; }
 .note-box { padding: 22px 24px; border-left: 6px solid var(--saiwai-coral); border-radius: 0 14px 14px 0; background: #fff; }
 .section--blue .note-box { border-color: #8dd3ed; color: var(--saiwai-ink); }
 .availability-wrap, .simulator, .fact-panel { padding: 30px; border-radius: var(--saiwai-radius); background: #fff; color: var(--saiwai-ink); box-shadow: 0 12px 28px rgba(8,27,43,.18); }
-.availability-table { width: 100%; border-collapse: collapse; font-size: 17px; }
-.availability-table th, .availability-table td { padding: 13px 10px; border-bottom: 1px solid #d9e4ea; text-align: left; }
-.availability-table th { color: var(--saiwai-navy); }
-.availability-status { margin: 0; color: var(--saiwai-muted); font-size: 15px; }
+.availability-wrap { padding: 32px; }
+.availability-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 24px; }
+.availability-status { margin: 0; color: var(--saiwai-muted); font-size: 18px; }
+.availability-legend { display: flex; flex-wrap: wrap; gap: 8px; }
+.availability-legend span { display: inline-flex; align-items: center; min-height: 36px; padding: 4px 12px; border-radius: 999px; font-size: 14px; font-weight: 700; }
+.legend-many, .status-many { color: #1c7b51; background: #e6f4ec; }
+.legend-few, .status-few { color: #956319; background: #fbf1dc; }
+.legend-none, .status-none { color: #c0392b; background: #fbe9e7; }
+.status-info { color: #3335bb; background: #eef0fb; }
+.availability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.availability-day { overflow: hidden; border: 1px solid #d8e3e9; border-radius: 14px; background: #fff; box-shadow: 0 6px 16px rgba(23,51,76,.08); }
+.availability-day h3 { display: flex; align-items: baseline; gap: 4px; min-height: 56px; margin: 0; padding: 12px 16px; color: #fff; background: var(--saiwai-navy); font-size: 18px; }
+.availability-day h3 span { font-size: 26px; font-weight: 900; }
+.availability-main { padding: 16px; }
+.availability-bath { display: grid; grid-template-columns: minmax(0, 1fr) 128px; align-items: center; gap: 12px; min-height: 72px; padding: 12px 16px; border-top: 1px solid #e4e6f0; }
+.availability-label { font-size: 18px; font-weight: 700; }
+.availability-badge { display: inline-flex; align-items: center; justify-content: flex-start; gap: 8px; min-height: 44px; padding: 8px 12px; border-radius: 8px; font-size: 18px; font-weight: 900; white-space: nowrap; }
+.availability-badge--main { width: 100%; min-height: 56px; padding: 12px 16px; font-size: 20px; }
+.availability-badge i { width: 20px; font-style: normal; font-size: 20px; text-align: center; }
+.availability-error { grid-column: 1 / -1; display: grid; gap: 8px; padding: 24px; border: 1px solid #e0b4ae; border-radius: 14px; color: #c0392b; background: #fbe9e7; }
 .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .form-grid label { display: block; font-size: 16px; font-weight: 700; }
 .form-grid select { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #9eb4c1; border-radius: 8px; background: #fff; }
@@ -121,7 +137,7 @@ h3 { color: var(--saiwai-navy); font-size: 25px; line-height: 1.45; }
 .source-note { color: var(--saiwai-muted); font-size: 14px; }
 
 @media (max-width: 760px) {
-  body { font-size: 17px; }
+  body { font-size: 18px; }
   .header-inner { min-height: 62px; }
   .site-nav a:not(.nav-cta) { display: none; }
   .hero, .hero-inner { min-height: 650px; }
@@ -133,8 +149,10 @@ h3 { color: var(--saiwai-navy); font-size: 25px; line-height: 1.45; }
   .floor-choice, .floor-block, .floor-block--reverse, .gallery, .form-grid, .contact, .care-grid { grid-template-columns: 1fr; }
   .floor-block--reverse .floor-image { order: 0; }
   .gallery figure:first-child { grid-row: auto; }
-  .availability-wrap, .simulator, .fact-panel { padding: 22px 18px; }
-  .availability-table { font-size: 15px; }
+  .availability-wrap, .simulator, .fact-panel { padding: 24px 16px; }
+  .availability-toolbar { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .availability-grid { grid-template-columns: 1fr; }
+  .availability-row { grid-template-columns: minmax(0, 1fr) 136px; }
   .contact { padding: 28px 22px; }
   .confirm-table { font-size: 15px; }
   .confirm-table th { width: 38%; }
