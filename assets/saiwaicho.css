@@ -48,6 +48,7 @@ h1 { max-width: 680px; margin-bottom: 22px; font-size: clamp(42px, 5.5vw, 72px);
 .photo-note { margin: 16px 0 0; color: #d7edf6; font-size: 13px; }
 .hero-steps { display: flex; flex-wrap: wrap; gap: 10px; max-width: 560px; }
 .hero-steps span { padding: 6px 12px; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; background: rgba(0,0,0,.15); font-size: 14px; }
+.hero-care-link { margin-top: 22px; color: var(--saiwai-navy); background: #fff; }
 .section { padding: 88px 0; }
 .section--cream { background: var(--saiwai-cream); }
 .section--blue { color: #fff; background: var(--saiwai-navy); }
@@ -143,7 +144,9 @@ h3 { color: var(--saiwai-navy); font-size: 25px; line-height: 1.45; }
   .hero, .hero-inner { min-height: 650px; }
   .hero-media { inset: 0; opacity: .38; }
   .hero-media::after { background: linear-gradient(90deg, rgba(23,51,76,.98), rgba(23,51,76,.65)); }
-  h1 { font-size: 43px; }
+	  h1 { font-size: 43px; }
+	  h1, h2, h3 { word-break: auto-phrase; overflow-wrap: anywhere; text-wrap: balance; }
+	  .contact > * { min-width: 0; }
   .hero-lead, .lede { font-size: 18px; }
   .section { padding: 64px 0; }
   .floor-choice, .floor-block, .floor-block--reverse, .gallery, .form-grid, .contact, .care-grid { grid-template-columns: 1fr; }
@@ -156,4 +159,15 @@ h3 { color: var(--saiwai-navy); font-size: 25px; line-height: 1.45; }
   .contact { padding: 28px 22px; }
   .confirm-table { font-size: 15px; }
   .confirm-table th { width: 38%; }
+	#codes { scroll-margin-top: 80px; }
+	#codes .availability-wrap { overflow: visible; padding-inline: 0; }
+	#codes .confirm-table, #codes .confirm-table tbody, #codes .confirm-table tr, #codes .confirm-table td { display: block; width: 100%; }
+	#codes .confirm-table thead { display: none; }
+	#codes .confirm-table tr { margin-bottom: 12px; overflow: hidden; border: 1px solid #d7e2e7; border-radius: 12px; background: #fff; }
+	#codes .confirm-table td { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 12px; padding: 12px 14px; border: 0; border-bottom: 1px solid #d7e2e7; }
+	#codes .confirm-table td::before { color: var(--saiwai-navy); font-weight: 900; white-space: nowrap; }
+	#codes .confirm-table td:nth-child(1)::before { content: "区分"; }
+	#codes .confirm-table td:nth-child(2)::before { content: "内容"; }
+	#codes .confirm-table td:nth-child(3)::before { content: "サービスコード"; }
+	#codes .confirm-table tr:last-child td:not(:last-child) { border-bottom: 1px solid #d7e2e7; }
 }
