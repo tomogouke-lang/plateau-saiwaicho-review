@@ -126,7 +126,7 @@ h3 { color: var(--saiwai-navy); font-size: 25px; line-height: 1.45; }
 .contact p { margin-bottom: 12px; }
 .footer { padding: 34px 20px; color: #cbdbe5; background: #102738; text-align: center; font-size: 14px; }
 .care-hero { padding: 104px 0 82px; color: #fff; background: linear-gradient(120deg, var(--saiwai-navy), var(--saiwai-blue)); }
-.care-hero h1 { max-width: 880px; }
+.care-hero h1 { max-width: none; }
 .care-hero .lede { color: #d8ebf4; }
 .care-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .care-card { padding: 24px; border: 1px solid #d4e2e9; border-radius: 16px; background: #fff; }
